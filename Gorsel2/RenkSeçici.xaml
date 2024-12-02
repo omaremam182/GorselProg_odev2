@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorsel2.RenkSeçici"
+             Title="RenkSeçici">
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Grid.Row="0" Height="500"/>
+        <RowDefinition Grid.Row="1" Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Grid.Column="0" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <VerticalStackLayout Grid.Row="0" BackgroundColor="Azure" >
+            <Label Text="Kırmızı ton" TextColor="Red" FontSize="Medium"/>
+            <Slider x:Name="ki_Slider" Value="0" MinimumTrackColor="Red" ThumbColor="Red" ValueChanged="Slider_ValueChanged" />
+
+            <Label Text="Yeşil ton" TextColor="Green" FontSize="Medium"/>
+            <Slider x:Name="ye_Slider" Value="0"  MinimumTrackColor="Green" ThumbColor="Green"  ValueChanged="Slider_ValueChanged" />
+            
+            <Label Text="Mavi ton" TextColor="Blue" FontSize="Medium"/>
+            <Slider x:Name="ma_Slider" Value="0" MinimumTrackColor="Blue" ThumbColor="Blue" ValueChanged="Slider_ValueChanged"  />
+            <Border >
+                <Label Text="#000000" TextColor="Gray" x:Name="re_Label" Padding="25" HorizontalOptions="Center"/>
+            </Border>
+            <Button Text="Random" Padding="25" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="re_Layout" Grid.Row="1" >
+
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

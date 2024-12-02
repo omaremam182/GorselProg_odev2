@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Gorsel2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Gorsel2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Gorsel2">
+
+    <FlyoutItem  Title="Ana Sayfa" Icon="dotnet_bot.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem  Title="Kredi Hesaplama" Icon="dotnet_bot.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:Kredi_Hesaplama}"
+            Route="KrediHesaplama" />
+    </FlyoutItem>
+
+
+    <FlyoutItem  Title="Renk Seçici" Icon="dotnet_bot.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:RenkSeçici}"
+            Route="R" />
+    </FlyoutItem>
+
+    <FlyoutItem  Title="Vücüt Kitle indeksi" Icon="dotnet_bot.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:Vucut_Kitle_Indexi}"
+            Route="vucut_kitle" />
+    </FlyoutItem>
+
+    
+    <FlyoutItem  Title="To Do List" Icon="dotnet_bot.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:ToDoList}"
+            Route="ToDoList" />
+    </FlyoutItem>
+</Shell>

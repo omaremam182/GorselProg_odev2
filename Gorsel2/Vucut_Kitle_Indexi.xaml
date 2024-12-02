@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorsel2.Vucut_Kitle_Indexi"
+             Title="Vucut_Kitle_Indexi">
+    <VerticalStackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+        <Label Text="VKi = kg / (boy * boy)" FontSize="Large" TextColor="CadetBlue"/>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="   Kilonuz (KG): "/>
+            <Entry x:Name="kilo_Entry" WidthRequest="70" TextChanged="kiloEntry_TextChanged" Keyboard="Numeric" MaxLength="5"/>
+            <Slider x:Name="kilo_Slider" Minimum="5" Maximum="300" MaximumTrackColor="Chartreuse" ThumbColor="OrangeRed" 
+                    MinimumTrackColor="Crimson"  WidthRequest="250" ValueChanged="kilo_Slider_ValueChanged"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout  Spacing="10">
+            <Label Text="Boyunuz (cm): " />
+            <Entry x:Name="boy_Entry" WidthRequest="70" TextChanged="boyEntry_TextChanged"  Keyboard="Numeric" MaxLength="5"/>
+            <Slider x:Name="boy_Slider" Minimum="5" Maximum="300"  MaximumTrackColor="Chartreuse" 
+                    MinimumTrackColor="Crimson" ThumbColor="OrangeRed" WidthRequest="250"
+                    ValueChanged="boy_Slider_ValueChanged"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="90">
+        <Label x:Name="vki_Label" IsVisible="False" HorizontalOptions="Start"/>
+            <Label x:Name="durum_Label" IsVisible="False" HorizontalOptions="End"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

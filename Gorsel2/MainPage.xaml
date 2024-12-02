@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorsel2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+             HorizontalOptions="Center">
+            <VerticalStackLayout 
+              Padding="1,0"
+              Spacing="5">
+
+                <Image
+                Source="kisisel_resim.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="benim Kişisel fotoğrafım" />
+                <Label
+                Text="22670310182" TextColor="GreenYellow" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                <Label
+                Text="Omar Emam" TextColor="GreenYellow" HorizontalTextAlignment="Center" FontSize="Medium"/>
+            </VerticalStackLayout>
+            <Label
+                Text="Bartın Üniversitesi Bilgisayar mühendisliği" FontSize="Small" TextColor="Brown" />
+            <Label
+                Text="Ödev1" FontSize="Small" TextColor="Yellow"  HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

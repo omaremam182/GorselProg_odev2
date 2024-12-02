@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorsel2.Kredi_Hesaplama"
+             Title="Kredi_Hesaplama">
+    <VerticalStackLayout Spacing="15">
+        <Picker x:Name="myPicker" SelectedIndex="0" Title="Kredi türünü seç" SelectedIndexChanged="myPicker_SelectedIndexChanged" >
+            <Picker.Items>
+                <x:String>Ihtiyaç Kredisi</x:String>
+                <x:String>Konut Kredisi</x:String>
+                <x:String>Taşıt Kredisi</x:String>
+                <x:String>Ticari Kredi</x:String>
+            </Picker.Items>
+        </Picker>
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Label Text="Kredi Tutarı (TL)" WidthRequest="103" TextColor="Crimson"/>
+            <Entry x:Name="tutar_Entry" Keyboard="Numeric" Text="0" WidthRequest="280" TextChanged="vade_TextChanged"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Label Text="Faiz Oranı " WidthRequest="103" TextColor="Gold"/>
+            <Entry x:Name="faiz_Entry"  Keyboard="Numeric" Text="0" WidthRequest="280" TextChanged="vade_TextChanged"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Label Text="vade " WidthRequest="103" TextColor="GreenYellow"/>
+            <Entry x:Name="vade_Entry" WidthRequest="280" Text="1" TextChanged="vade_TextChanged"/>
+        </HorizontalStackLayout>
+
+        <Slider x:Name="vade_slider" Minimum="0" WidthRequest="690" Maximum="240" Value="0" MinimumTrackColor="Red" MaximumTrackColor="Chartreuse"
+                ValueChanged="vade_slider_ValueChanged" />
+
+        <VerticalStackLayout BackgroundColor="Gold" Spacing="9">
+            <Label x:Name="aylik_Label" IsVisible="Hidden" HorizontalOptions="Center" TextColor="BlueViolet" />
+
+            <Label x:Name="faiz_Label" IsVisible ="False"  HorizontalOptions="Center" TextColor="BlueViolet" />
+            <Label  x:Name="toplam_Label"
+                    HorizontalOptions="Center" 
+                    TextColor="BlueViolet" 
+                    IsVisible ="False"/>
+        </VerticalStackLayout>
+
+        <!--  <Button Text="Hesapla " Padding="5" WidthRequest="250" Clicked="Hesapla_Clicked"/> -->
+
+    </VerticalStackLayout>
+</ContentPage>
